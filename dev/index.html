@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description"
+    <meta name="description" property="og:description"
+        content="AlmaLinux mirror creado para Bernini.DEV por Vasak Group. Servicio disponible para todos los usuarios de AlmaLinux." />
+    <meta name="twitter:description"
         content="AlmaLinux mirror creado para Bernini.DEV por Vasak Group. Servicio disponible para todos los usuarios de AlmaLinux." />
     <meta name="author" content="Vasak Group" />
+    <meta name="copyright" content="Bernini.DEV" />
+    <meta property="og:url" name="twitter:url" content="https://almalinux-mirror.bernini.dev/" />
     <meta name="keywords" content="linux, almalinux, alma, alma linux, mirror, almalinux mirror," />
+    <meta name="robots" content="index" />
+    <meta property="og:site_name" content="AlmaLinux Mirror | Powered by Bernini" />
+    <meta property="og:title" content="AlmaLinux Mirror | Powered by Bernini" />
+    <meta property="twitter:title" content="AlmaLinux Mirror | Powered by Bernini" />
+    <meta property="og:image" content="https://i.postimg.cc/FFn4c1wf/image.png" />
+    <meta property="twitter:card" content="https://i.postimg.cc/FFn4c1wf/image.png" />
+    <meta property="og:type" content="site" />
+
     <title>AlmaLinux Mirror | Powered by Bernini</title>
-    <link rel="shortcut icon" href="https://fonts.gstatic.com/s/i/materialicons/drive_file_move/v17/24px.svg"
-        crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://almalinux.org/fav/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://almalinux.org/fav/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://almalinux.org/fav/favicon-16x16.png" />
+    <link rel="mask-icon" href="https://almalinux.org/fav/safari-pinned-tab.svg" color="#1A1135" />
+    <link rel="shortcut icon" href="https://almalinux.org/fav/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#1A1135" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" as="style"
         crossorigin="anonymous">
@@ -181,7 +199,7 @@
                     n[3] += entry.size;
                     tblHtm += `<tr>
                             <td><span class="material-icons" title="${entry.ext} File">insert_drive_file</span><span class="dn">${entry.type}</span></td>
-                            <td><div title="...${entry.name.substr(-10)}"><a download="${entry.name}" href="${url}" style="color:#FFF;">${entry.name}</a></div>
+                            <td><div title="...${entry.name.substr(-10)}"><a download="${entry.name}" style="color:#FFF" href="${url}">${entry.name}</a></div>
                                     <span class="fr"><a download="${entry.name}" href="${url}"><span class="material-icons" title="Save ${entry.ext}">download</span></a>
                                     <a href="${url}" target="_blank"><span class="material-icons" title="Open ${entry.ext}">open_in_browser</span></a></span>
                             </td>
@@ -206,7 +224,7 @@
 
             $(c).innerHTML += tblHtm;
             if (n[0] == a.length) {
-                $(f).innerHTML = `<span>Powered By <a target="_blank" href="https://vasak.net.ar/">Vasak Group</a> &nbsp;&nbsp;&nbsp;</span>
+                $(f).innerHTML = `<span>Mirror managed by <a target="_blank" href="https://vasak.net.ar/">Vasak Group</a> &nbsp;&nbsp;&nbsp;</span>
                         <span class="material-icons">folder_open</span><span>${n[1]}</span>
                         <span class="material-icons">description</span><span>${n[2]}</span>
                         <span class="material-icons">account_tree</span><span>${(n[1] + n[2])}<strong> : </strong> &nbsp;&nbsp;&nbsp;${humanFileSize(n[3], true, 3)}</span>`;
@@ -298,6 +316,10 @@
             padding: 0 0 0 1em;
         }
 
+        .material-icons {
+            color: #bd3f9c;
+        }
+
         th:first-child {
             padding: unset;
         }
@@ -334,10 +356,6 @@
         span.material-icons+span {
             vertical-align: middle;
             padding: 0 2em 0 1em;
-        }
-
-        .material-icons{
-            color: #bd3f9c;
         }
 
         section {
@@ -465,7 +483,10 @@
                 <input id="idx-filter" type="text" placeholder="Filter">
             </li>
             <li>
-                <img src="https://bernini.dev/wp-content/uploads/2024/11/Bernini.png" alt="Bernini.DEV" height="54" />
+                <a target="_blank" href="https://bernini.dev/">
+                    <img src="https://bernini.dev/wp-content/uploads/2024/11/Bernini.png" alt="Bernini.DEV"
+                        height="54" />
+                </a>
             </li>
         </ul>
     </header>
